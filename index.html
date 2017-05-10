@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Image Test</title>
+	<style type="text/css">
+		@font-face {
+			font-family: shadowtest;
+			src: url("shadowtestGX.ttf");
+		}
+		#seventytwoppi {
+			width: 100%;
+			margin: 0 auto;
+			height: 450px;
+			font-size: 8em;
+			text-align: center;
+			font-family: shadowtest;
+		}
+		#date {
+			font-family: 'Georgia';
+		}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3-ease.v1.min.js"></script>
+	<script type="text/javascript">
+	function getSeconds() {
+		var date = new Date();
+		var s = date.getSeconds();
+		$("#date").html(s);
+		$("#vartest").css('font-variation-settings', "'wght' " + s)
+	    var t = setTimeout(getSeconds, 500);
+
+	}
+
+	</script>
+</head>	
+
+<body onload="getSeconds()">
+<div id="seventytwoppi">
+<p id="vartest">I</p>
+</div>
+<p id="date"></p>
+<p id="varsetting"></p>
+</body>
+</html>
